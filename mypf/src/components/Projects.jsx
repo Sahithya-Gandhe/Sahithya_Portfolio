@@ -17,8 +17,8 @@ const Projects = () => {
       description: 'An innovative Application that allows users to ask questions, get real-time responses, and interact through a user-friendly interface. Helps users reduce work pressure by automating tasks using Voice Recognition and Dynamic Response.',
       technologies: ['HTML', 'CSS', 'Javascript'],
       links: {
-        github: '#',
-        live: '#'
+        github: 'https://github.com/Sahithya-Gandhe/Virtual-WebAssistant',
+        live: 'https://sahithya-gandhe.github.io/Virtual-WebAssistant/'
       }
     }
   ];
