@@ -4,15 +4,6 @@ import '../styles/Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'Digital Journal',
-      description: 'A versatile Application to write daily notes and delete outdated notes. Features include storing important dates for upcoming events and managing social media sites and passwords.',
-      technologies: ['HTML', 'CSS', 'Javascript'],
-      links: {
-        github: '#',
-        live: '#'
-      }
-    },
-    {
       title: 'AI Virtual Assistant Website',
       description: 'An innovative Application that allows users to ask questions, get real-time responses, and interact through a user-friendly interface. Helps users reduce work pressure by automating tasks using Voice Recognition and Dynamic Response.',
       technologies: ['HTML', 'CSS', 'Javascript'],
@@ -20,7 +11,17 @@ const Projects = () => {
         github: 'https://github.com/Sahithya-Gandhe/Virtual-WebAssistant',
         live: 'https://sahithya-gandhe.github.io/Virtual-WebAssistant/'
       }
-    }
+    },
+    
+{
+  title: 'Re-Book Hub',
+  description: 'A web platform that helps students sell and buy stationery easily within their community. The system includes authentication, user profiles, and product listings to make reselling convenient and accessible.',
+  technologies: ['HTML', 'CSS', 'JavaScript', 'Supabase'],
+  links: {
+    github: 'https://github.com/Sahithya-Gandhe/The-ReBookHub', // replace with your repo link
+    // live: 'https://sahithya-gandhe.github.io/Re-Book-Hub/' // replace with your live demo link if available
+  }
+}
   ];
 
   return (

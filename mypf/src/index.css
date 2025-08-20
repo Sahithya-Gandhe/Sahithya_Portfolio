@@ -1,16 +1,35 @@
 :root {
+  --primary-color: #646cff;
+  --text-color: #213547;
+  --background-color: #ffffff;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text-color);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Responsive font sizes */
+  font-size: 16px; /* Base font size for desktop */
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px; /* Smaller base font size for tablets and mobiles */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 12px; /* Even smaller base font size for small mobile devices */
+  }
 }
 
 a {
@@ -25,9 +44,49 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   min-width: 320px;
   min-height: 100vh;
+  box-sizing: border-box; /* Ensure consistent box model */
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+h1 {
+  font-size: 3.2em; /* Relative to root font size */
+  line-height: 1.1;
+}
+
+/* Adjust h1 for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
 }
 
 h1 {
@@ -54,10 +113,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
- @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --text-color: #213547;
+    --background-color: #ffffff;
   }
   a:hover {
     color: #747bff;
@@ -65,4 +124,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} 
+}

@@ -36,60 +36,101 @@
   font-size: 1.1em;
 }
 
+
 .nav-right {
   display: flex;
-  gap: 2rem;
-  align-items: flex-end;
-}
-
-.contact-info p {
-  margin: 0.2rem 0;
-  color: var(--text-color);
-  font-size: 0.9em;
-}
-
-.social-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.social-links a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: flex;
   align-items: center;
-  /* gap: 0.5rem; */
-  /* padding: 0.5rem 1rem; */
-  /* border-radius: 8px; */
-  background-color: rgba(100, 108, 255, 0.1);
+  position: relative;
 }
 
-.social-links a:hover {
-  color: #535bf2;
-  background-color: rgba(100, 108, 255, 0.2);
-  transform: translateY(-2px);
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.1s ease;
 }
 
-.social-icon {
-  font-size: 1.5rem;
+.hamburger {
+  display: none;
 }
 
-.social-label {
-  font-size: 0.9rem;
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: auto;
+  margin-right: 1rem; /* Align to the right corner */
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--text-color);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-links li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1em;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+
 
 @media (max-width: 768px) {
   .nav-content {
     flex-direction: column;
     text-align: center;
-    /* gap: 1rem; */
   }
 
-  .nav-right {
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1rem; /* Align to the right corner */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background: var(--bg-color);
     flex-direction: column;
-    align-items: center;
-    /* gap: 1rem; */
+    gap: 1rem;
+    width: 180px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+    padding: 1rem 0;
+    display: none;
+    z-index: 1099;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li a {
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    display: block;
   }
 }

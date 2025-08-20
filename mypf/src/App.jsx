@@ -13,12 +13,12 @@ function App() {
     <div className="app">
       <Navbar />
       <main className="main-content">
-        <Hero />
-        <Projects />
-        <Experience />
-        <Education />
-        <Achievements />
-        <Footer />
+        <Hero id="hero" />
+        <Projects id="projects" />
+        <Experience id="experience" />
+        <Education id="education" />
+        <Achievements id="achievements" />
+        <Footer id="footer" />
       </main>
     </div>
   )
